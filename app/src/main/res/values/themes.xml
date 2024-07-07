@@ -1,0 +1,22 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.NoteWave" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <!-- Customize your light theme here. -->
+         <item name="colorPrimary">@color/red</item>
+    </style>
+
+    <!-- Progress Bar -->
+    <style name="Progressbar" parent="Widget.AppCompat.ProgressBar">
+        <!-- Customize your light theme here. -->
+        <item name="colorPrimary">@color/red</item>
+    </style>
+
+    <style name="Theme.NoteWave" parent="Base.Theme.NoteWave" />
+
+    <!-- Bottom Sheet -->
+    <style name="BottomSheetStyle" parent="Theme.Design.Light.BottomSheetDialog">
+        <!-- Customize your light theme here. -->
+        <item name="bottomSheetStyle">@drawable/delete_bottom_sheet_bg</item>
+    </style>
+
+</resources>

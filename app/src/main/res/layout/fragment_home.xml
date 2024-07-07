@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.Home"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:id="@+id/filterLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_marginStart="20dp">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:src="@drawable/filter"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:id="@+id/noFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No Filter"
+            android:textSize="14sp"
+            android:layout_marginHorizontal="20dp"
+            android:background="@drawable/unselected_filter_bg"
+            android:layout_marginStart="10dp"
+            android:paddingVertical="5dp"
+            android:paddingHorizontal="10dp"/>
+
+        <TextView
+            android:id="@+id/hightolowFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="High To Low"
+            android:textSize="14sp"
+            android:background="@drawable/unselected_filter_bg"
+            android:layout_marginStart="10dp"
+            android:paddingVertical="5dp"
+            android:paddingHorizontal="10dp"/>
+
+        <TextView
+            android:id="@+id/lowtohighFilter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Low To High"
+            android:textSize="14sp"
+            android:background="@drawable/unselected_filter_bg"
+            android:layout_marginStart="10dp"
+            android:paddingVertical="5dp"
+            android:paddingHorizontal="10dp"/>
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/notesRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/filterLayout"
+        tools:listitem="@layout/notes_card"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingBtnHome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/addbtn"
+        android:backgroundTint="@color/red"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="26dp"
+        android:visibility="visible"
+        android:elevation="8dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.InsertNote">
+
+    <EditText
+        android:id="@+id/editTextTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Title ..."
+        android:textSize="16sp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_text_bg"
+        android:padding="10dp"/>
+
+    <EditText
+        android:id="@+id/editTextSubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Subtitle ..."
+        android:textSize="16sp"
+        android:layout_below="@+id/editTextTitle"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_text_bg"
+        android:padding="10dp"/>
+
+    <LinearLayout
+        android:id="@+id/priorityLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editTextSubtitle"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="15dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Priority"
+            android:textSize="16sp"
+            android:layout_marginStart="10dp"
+            android:layout_margin="10dp"/>
+
+        <ImageView
+            android:id="@+id/greenPriority"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/green_shape"
+            android:layout_margin="10dp"/>
+
+        <ImageView
+            android:id="@+id/yellowPriority"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/yellow_shape"
+            android:layout_margin="10dp"/>
+
+        <ImageView
+            android:id="@+id/redPriority"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/red_shape"
+            android:layout_margin="10dp"/>
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/editTextInsertNote"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:hint="Insert Note ..."
+        android:textSize="16sp"
+        android:gravity="start"
+        android:layout_below="@+id/priorityLayout"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_text_bg"
+        android:padding="10dp"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingBtnInsert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:backgroundTint="@color/red"
+        android:src="@drawable/check"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="26dp"
+        android:layout_marginEnd="26dp"/>
+
+</RelativeLayout>
